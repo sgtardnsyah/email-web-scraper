@@ -1,11 +1,37 @@
-
 # Email Web Scraper 📧
 
-[![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/your-username/your-repository-name/pulls)
-[![Issues](https://img.shields.io/github/issues/your-username/your-repository-name.svg)](https://github.com/your-username/your-repository-name/issues)
-[![Stars](https://img.shields.io/github/stars/your-username/your-repository-name.svg)](https://github.com/your-username/your-repository-name/stargazers)
+<p align="center">
+  <a href="https://github.com/sgtardnsyah/email-web-scraper/commits/main">
+    <img src="https://img.shields.io/github/last-commit/sgtardnsyah/email-web-scraper?logo=git&color=informational" alt="last commit">
+  </a>
+  <a href="https://www.python.org/">
+    <img src="https://img.shields.io/badge/python-100%25-blue?logo=python" alt="python 100%">
+  </a>
+  <a href="https://github.com/sgtardnsyah/email-web-scraper/search?l=python">
+    <img src="https://img.shields.io/github/languages/count/sgtardnsyah/email-web-scraper?color=blue" alt="languages">
+  </a>
+</p>
+
+---
+
+**Email Web Scraper** is a simple yet powerful Python tool to extract email addresses from a list of websites, save them to Excel, and speed up your data collection!
+
+---
+
+## 🚀 Built With
+
+<p align="center">
+  <a href="https://daringfireball.net/projects/markdown/">
+    <img src="https://img.shields.io/badge/Markdown-000000?logo=markdown&logoColor=white" alt="Markdown">
+  </a>
+  <a href="https://www.python.org/">
+    <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python">
+  </a>
+  <a href="https://pandas.pydata.org/">
+    <img src="https://img.shields.io/badge/pandas-150458?logo=pandas&logoColor=white" alt="pandas">
+  </a>
+</p>
+
 
 ---
 
@@ -26,13 +52,16 @@
 
 ---
 
+
 ## Requirements 🛠️
 
-- Python 3.x
-- [requests](https://pypi.org/project/requests/)
-- [beautifulsoup4](https://pypi.org/project/beautifulsoup4/)
-- [pandas](https://pypi.org/project/pandas/)
-- [openpyxl](https://pypi.org/project/openpyxl/)
+| Package         | Link                                                                |
+|-----------------|---------------------------------------------------------------------|
+| Python 3.x      | [python.org](https://www.python.org/)                               |
+| requests        | [requests](https://pypi.org/project/requests/)                      |
+| beautifulsoup4  | [beautifulsoup4](https://pypi.org/project/beautifulsoup4/)          |
+| pandas          | [pandas](https://pypi.org/project/pandas/)                          |
+| openpyxl        | [openpyxl](https://pypi.org/project/openpyxl/)                      |
 
 **Install all dependencies with:**
 
@@ -110,6 +139,13 @@ All done! Results saved to email_scrape_results.xlsx
 - **Encountering errors?**  
   The script will skip problematic URLs and continue.  
   All errors will be displayed in the console for your review.
+
+---
+
+
+## License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
 
 ---
 
