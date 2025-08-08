@@ -1,98 +1,116 @@
-# EMAIL-WEB-SCRAPER
 
-_Uncover Contacts Faster, Power Your Outreach Efforts_
+# Email Web Scraper 📧
 
-[![last commit](https://img.shields.io/github/last-commit/sgtardnsyah/email-web-scraper)](https://github.com/sgtardnsyah/email-web-scraper)
-[![python](https://img.shields.io/badge/python-100%25-blue)](https://python.org/)
-[![pandas](https://img.shields.io/badge/pandas-yes-green)](https://pandas.pydata.org/)
-
----
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Usage](#usage)
-- [Example Output](#example-output)
-- [Disclaimer](#disclaimer)
-- [Credits](#credits)
+[![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/your-username/your-repository-name/pulls)
+[![Issues](https://img.shields.io/github/issues/your-username/your-repository-name.svg)](https://github.com/your-username/your-repository-name/issues)
+[![Stars](https://img.shields.io/github/stars/your-username/your-repository-name.svg)](https://github.com/your-username/your-repository-name/stargazers)
 
 ---
 
-## Overview
+## Description
 
-**email-web-scraper** is a versatile developer tool designed to automate the extraction of email addresses from multiple websites, consolidating results into organized Excel reports.  
-It streamlines data collection workflows, making outreach and contact discovery more efficient.
-
----
-
-## Features
-
-- **URL Management:** Centralized URL configuration for easier scraping management.
-- **Structured Reporting:** Automatically compiles found emails into Excel files for easy analysis.
-- **Automation:** Scrapes emails from multiple websites with minimal manual steps.
-- **Dependency Handling:** Uses essential libraries for HTTP requests, HTML parsing, and data processing.
-- **Seamless Integration:** Can be integrated into larger data collection or lead generation projects.
+**Email Web Scraper** is a simple yet powerful Python tool for extracting email addresses from a list of websites. It reads URLs from a `urls.txt` file, scrapes each website for email addresses, and exports the results into an Excel file. Perfect for lead generation, data collection, or any use case where you need to gather contact information from multiple online sources efficiently.
 
 ---
 
-## Getting Started
+## Features ✨
 
-### Prerequisites
-
-- **Python** (recommended: Python 3.8+)
-- **Pip** (for package management)
-
-### Installation
-
-1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/sgtardnsyah/email-web-scraper.git
-    cd email-web-scraper
-    ```
-2. **Install the dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-### Usage
-
-1. **Prepare your `urls.txt` file:**  
-   List the websites you want to scrape, one per line
-
-2. **Run the script:**
- ```bash
- python emailwebscraper.py
- ```
-
-3. **Get the results:**  
-Results are saved as `email_scrape_results.xlsx` and can be opened in Excel or Google Sheets.
+- **Bulk Scraping:** Processes multiple URLs from `urls.txt` in one go.
+- **Email Extraction:** Uses regex to find and extract all valid email addresses from webpage content.
+- **Dual Email Columns:** Organizes found emails into two columns: `EMAIL 1` (the first found) and `EMAIL 2` (additional emails, separated by a slash).
+- **Error Handling:** Gracefully handles request timeouts, connection errors, and non-200 status codes—ensuring uninterrupted scraping.
+- **Progress Tracking:** Console output shows progress, emails found, and errors encountered.
+- **Excel Export:** Automatically saves results in a formatted `.xlsx` file for easy viewing and use.
 
 ---
 
-## Example Output
+## Requirements 🛠️
 
-| WEBSITE              | EMAIL 1          | EMAIL 2      |
-|----------------------|------------------|--------------|
-| https://website1.com | info@abc.com     | hr@abc.com   |
-| https://website2.com |                  |              |
-| https://website3.com | hello@xyz.com    |              |
+- Python 3.x
+- [requests](https://pypi.org/project/requests/)
+- [beautifulsoup4](https://pypi.org/project/beautifulsoup4/)
+- [pandas](https://pypi.org/project/pandas/)
+- [openpyxl](https://pypi.org/project/openpyxl/)
+
+**Install all dependencies with:**
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## How to Use 🚀
+
+Follow these simple steps to get started:
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/your-repository-name.git
+cd your-repository-name
+```
+
+### 2. Install the dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Add your target URLs
+
+Open or create the file `urls.txt` in the project directory.  
+List **one website URL per line**. For example:
+
+```
+https://website1.com
+https://website2.com
+https://website3.com
+```
+
+### 4. Run the scraper
+
+```bash
+python emailwebscraper.py
+```
+
+### 5. Check your results
+
+- When the script finishes, you’ll see a new file named **`email_scrape_results.xlsx`** in the same directory.
+- The results will be organized in a table format, for example:
+
+    | WEBSITE              | EMAIL 1         | EMAIL 2      |
+    |----------------------|-----------------|--------------|
+    | https://website1.com | info@abc.com    | hr@abc.com   |
+    | https://website2.com |                 |              |
+    | https://website3.com | hello@xyz.com   |              |
 
 ---
 
-## Disclaimer
+### Sample Console Output
 
-- **Use this script responsibly and in accordance with each website's terms of service.**
-- Do not use for spam or any illegal purposes.
+The script will display progress in your terminal, like:
+
+```
+Processing: https://website1.com ... [2 emails found]
+Processing: https://website2.com ... [no emails found]
+Processing: https://website3.com ... [1 email found]
+All done! Results saved to email_scrape_results.xlsx
+```
 
 ---
 
-## Credits
+### Troubleshooting
 
-Developed by [Cik (sigitardiansyah24)](https://github.com/sigitardiansyah24).  
-Feel free to fork, modify, or contribute!
+- **No emails found?**  
+  Make sure the websites have public email addresses visible in their content.
+
+- **Encountering errors?**  
+  The script will skip problematic URLs and continue.  
+  All errors will be displayed in the console for your review.
 
 ---
+
+> **Happy scraping! 😊**
